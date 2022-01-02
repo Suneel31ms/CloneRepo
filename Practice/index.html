@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b6005f3769.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="header">
+    <nav class="navbar" id="nlinks">
+        <img class="logo" src="s_logo.png" alt="">
+        <div >
+           <i class="icon fas fa-cross" onclick="hidemenu()"></i>
+        <ul class="menu">
+            <li class="active"><a href="#"><i class="fas fa-home"></i>home</a></li>
+            <li><a href="#"><i class="fas fa-user"></i>about</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">Mission</a></li>
+                    <li class="hover-me"><a href="#">Vision<i class="fas fa-chevron-right"></i></a>
+                        <div class="sub-menu2">
+                            <ul>
+                                <li><a href="#">face detection</a></li>
+                                <li><a href="#">text detection</a></li>
+                                <li><a href="#">logo detection</a></li>
+                                <li><a href="#">label detection</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hover-me"><a href="#">Team<i class="fas fa-chevron-right"></i></a>
+                    <div class="sub-menu2">
+                        <ul>
+                            <li><a href="#">manager</a></li>
+                            <li><a href="#">h.r</a></li>
+                            <li><a href="#">developer</a></li>
+                            <li><a href="#">tester</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#"><i class="fas fa-address-card"></i>address</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">new delhi</a></li>
+                        <li><a href="#">skyview park , noida</a></li>
+                        <li><a href="#">tech park , gurgaon</a></li>
+                    </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-edit"></i>training</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">html</a></li>
+                    <li><a href="#">css</a></li>
+                    <li><a href="#">php</a></li>
+                    <li><a href="#">react</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#"><i class="fas fa-phone-alt"></i>contact</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">manager</a></li>
+                        <li><a href="#">h.r</a></li>
+                        <li><a href="#">support</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+       </div>
+        <i class="icon fas fa-bars" onclick="showmenu()"></i>
+    </nav>
+    <h1 class="text">I'm <span class="auto-type"></span></h1>  
+</section>
+
+<!-- -------js code -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+      var obj={
+          strings:["frontend developer","backend developer","database developer","full stack developer"],
+          typeSpeed:40,
+          backSpeed:100,
+          loop:true
+      };
+      var type= new Typed(".auto-type",obj);
+
+    //   /////
+      var navbar=document.getElementById("nlinks");
+      function showmenu(){
+          navbar.style.right = "0";
+      }
+      function hidemenu(){
+          navbar.style.right = "-200px";
+      }
+</script>
+</body>
+</html>

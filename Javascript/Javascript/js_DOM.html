@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        .cool{
+            color: brown;
+            font-size: 20px;
+            text-shadow: 2px 2px black;
+            padding: 10px;
+            background-color: burlywood;
+    
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Shopping List</h1>
+    <p id="para">Get It done today</p>
+    <p>No excuses</p>
+    <ul class="list">
+        <li xyz="33">Notebook</li>
+        <li>Pen</li>
+        <li>Book</li>
+        <li>Bag</li>
+    </ul>
+    <button onclick="myfun()">Try it</button>
+    <p id="p1"></p>
+
+    <script>
+        //Dom Targeting Method.......
+        var a=document.getElementsByTagName("h1");
+        console.log(a);
+        var b=document.getElementsByClassName("list");
+        console.log(b);
+        var c=document.getElementById("para");
+        //Dom querySelector method......
+        var q=document.querySelector("p");
+        var qq=document.querySelectorAll("p,  h1, li");
+
+        //DOM getMethods & setMethods.......
+        var x=document.querySelector("li").getAttribute("xyz");
+        console.log(x);
+        var y=document.querySelector("li").setAttribute("xyz","44");
+        var x1=document.querySelector("li").getAttribute("xyz");
+        document.querySelector("#p1").innerHTML="This is a paragraph";
+
+        //DOM Css Styling Methods........
+        var target=document.querySelector("#p1");
+        // target.style.backgroundColor="grey";
+        // target.className="parag";
+        target.classList.add("cool");
+        target.classList.remove("cool");
+        function myfun(){
+            target.classList.toggle("cool");
+        }
+        //.......Parent Element & child...
+        // var target2=document.querySelectorAll("li")[1];
+        var target2=document.querySelectorAll("li")[1].parentElement.parentElement.children;
+       
+    </script>
+</body>
+</html>

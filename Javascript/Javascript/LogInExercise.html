@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object exercise7</title>
+</head>
+
+<body>
+    <script>
+        //creating a array.....
+        var database = [
+            {
+                username: "ram",
+                password: "ram@123"
+            },
+            {
+                username: "kumar",
+                password: "222"
+            },
+            {
+                username: "singh",
+                password: "111"
+            },
+            {
+                username: "kapil",
+                password: "333"
+            }
+        ];
+        //creatin another array....
+        var newsfeed = [
+            { username: "sonu", timeline: "hii..I'm front end developer" },
+            { username: "kapil", timeline: "hii..I'm Back end developer" },
+            { username: "ramesh", timeline: "hii..I'm full stack developer" }
+        ];
+        function isUserValid(user, pass) {
+            for (var i = 0; i < database.length; i++) {
+                if (user === database[i].username && pass === database[i].password) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function signIn(user, pass) {
+            if (isUserValid(user, pass)) {
+                console.log(newsfeed);
+            } else {
+                alert("Sorry...username and password not match");
+            }
+        }
+
+        var userPrompt = prompt("Enter Username");
+        var passPrompt = prompt("Enter Password");
+        signIn(userPrompt, passPrompt);
+    
+    </script>
+</body>
+
+</html>

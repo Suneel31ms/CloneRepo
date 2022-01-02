@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            width: 40%;
+            min-height: 5vh;
+            padding: 10px 20px;
+            background-color: brown;
+            color: burlywood;
+}
+    </style>
+</head>
+
+<body>
+    <h2 class="head">Javsacript DOM</h2>
+
+    <p id="intro">Finding HTML Elements by Id</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>This example demonstrates the <b>getElementsById</b> method.</p>
+    <div id="main">
+        <p>this is first para</p>
+        <p>this is second para</p>
+        <p>this is third para</p>
+    </div>
+        <ul class="list">
+            <h4>LIST....</h4>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Blog</li>
+        </ul>
+    
+    <p id="demo"></p>
+    <script>
+        // Id Selector......
+        var element=document.getElementById("intro");
+        document.getElementById("demo").innerHTML=
+        "this text from intro paragraph is: "+element.innerHTML;
+
+    //     TagName Selector....
+        var element=document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML=
+        "this is lorem paragraph :" + element[3].innerHTML;
+       
+       var element1=document.getElementById("main");
+       var element2=element1.getElementsByTagName("p");
+       document.getElementById("demo").innerHTML="Hello 2:- "+element2[1].innerHTML;
+       
+       //ClassName Selector.....
+    var element3=document.getElementsByClassName("head");
+    document.getElementById("demo").innerHTML=element3[0].innerHTML;
+
+    //querySelector......
+    var queryElement=document.querySelector("#intro");
+    document.getElementById("demo").innerHTML=queryElement.innerHTML
+
+    //querySelectorAll.......
+    var queryElement=document.querySelectorAll("li");
+    document.getElementById("demo").innerHTML="querSelectorAll::-- "+queryElement[2].innerHTML
+    </script>
+</body>
+
+</html>

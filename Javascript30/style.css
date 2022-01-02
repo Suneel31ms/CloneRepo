@@ -1,0 +1,40 @@
+*{
+    padding: 0%;margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/Toche_web/iced.jpg');
+    background-position: center;
+    background-size: cover;
+   text-align: center;
+   position: relative;
+}
+.keys{
+   position: absolute;
+   top: 50%;
+   left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.key{
+    width: 120px;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    border: 2px solid black;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+}
+.key:hover{
+    background-color: gray;
+    cursor: pointer;
+    text-shadow: 1px 1px tomato;
+}
+kbd{
+    color: white;
+}
+h6{
+    color: orange;
+}

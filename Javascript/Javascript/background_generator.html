@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Generator</title>
+    <link rel="stylesheet" href="background_style.css">
+</head>
+
+<body id=bodycolor>
+    <h1>Background Generator</h1>
+    <input type="color" class="color1" name="color1" value="#00ff00">
+    <input type="color" class="color2" name="color2" value="#ff0000">
+    <h2>Current CSS Background </h2>
+    <h3></h3>
+    <script>
+        var css = document.querySelector("h3");
+        var color1 = document.querySelector(".color1");
+        var color2 = document.querySelector(".color2");
+        var body = document.getElementById("bodycolor");
+
+        color1.addEventListener("input", changeBgColor);
+
+        color2.addEventListener("input", changeBgColor);
+        function changeBgColor() {
+            body.style.background = "linear-gradient(to right,"
+                + color1.value
+                + ","
+                + color2.value
+                + ")";
+            css.textContent = body.style.background;
+        }
+
+        //////
+        // function myfun(para) {
+        //     var whathappen;
+        //     switch (para) {
+        //         case "one":
+        //             whathappen = "you counter a monster";
+        //             break;
+        //         case "two":
+        //             whathappen = "you arrived home";
+        //             break;
+        //         case "three":
+        //             whathappen = "you found a river";
+        //             break;
+        //         case "four":
+        //             whathappen = " you run into a roll";
+        //             break;
+        //         default:
+        //             whathappen = "please enter a valid direction";
+        //     }
+            // return whathappen;
+        //     console.log(whathappen);
+        // }
+        // console.log(myfun("three"));
+        //myfun("four");
+    </script>
+</body>
+
+</html>

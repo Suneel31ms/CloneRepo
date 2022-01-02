@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+<body>
+    <script>
+        const radius = [3,2,6,8];
+       
+    //     const outputArea=[];
+    //     const outputCircumference=[];
+    //     const outputDiameter=[];
+
+    //     radius.map(value=>{
+    //         outputArea.push(Math.PI*value*value);
+    //         outputCircumference.push(2*Math.PI*value);
+    //         outputDiameter.push(2*value);
+    //         return outputArea;
+    //         return outputCircumference;
+    //         return outputDiameter;
+    
+    //     })
+    //     console.log(radius);
+    //    console.log('Area:',outputArea);
+    //    console.log('Circumference:',outputCircumference);
+    //    console.log('Diameter:',outputDiameter);
+
+
+       const area =function (radius){
+           return Math.PI*radius*radius;
+       }
+       const circumference =function (radius){
+           return 2*Math.PI*radius;
+       }
+       const diameter =function (radius){
+           return 2*radius;
+       }
+
+       var calculate = function(radius,logic){
+           const output = [];
+           for(let i=0;i<radius.length;i++){
+               output.push(logic(radius[i]))
+           }
+           return output;
+       }
+       console.log(calculate(radius,area));
+       console.log(calculate(radius,circumference));
+       console.log(calculate(radius,diameter));
+    </script>
+</body>
+</html>

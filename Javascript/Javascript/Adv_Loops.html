@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adv. loops</title>
+</head>
+<body>
+    
+    <script>
+        const basket = ['apples','oranges','grapes'];
+        const basketObj={
+            fruit1:'apple',
+            fruit2:'orange',
+            fruit3:'grape'
+        };
+        //1..for
+        for(let i=0;i<basket.length;i++){
+            console.log('for:',basket[i]);
+        }
+
+        //2.. forEach
+        basket.forEach(value=>{
+            console.log('forEach:',value);
+        })
+
+        //3..for of using for array,string
+        for(item of basket){
+            console.log('forOf:',item);
+        }
+        //Enumerator
+        //4..for in using in object
+        for(item in basketObj){
+            console.log(item);
+            // console.log(item,basketObj[item]);
+        }
+
+
+
+
+    </script>
+</body>
+</html>

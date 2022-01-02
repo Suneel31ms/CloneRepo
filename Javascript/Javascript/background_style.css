@@ -1,0 +1,18 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background-image: linear-gradient(to left,rgb(236, 188, 29),rgb(219, 47, 16));
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+    letter-spacing: .5em;
+    text-transform: uppercase;
+    font-family: sans-serif;
+     margin-top:  15%;
+}
+h1{
+ margin-bottom: 40px;
+}
+input{
+    margin-bottom: 40px;
+}

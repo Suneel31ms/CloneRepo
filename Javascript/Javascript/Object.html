@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Data Structure</title>
+</head>
+<body>
+    <script>
+        // ......create a object.....
+        var obj={
+            name:"Ram",
+            age:43,
+            hobby:"soccer",
+            isMarried:true
+        };
+        document.write(obj.name+" "+obj.age+" "+obj.hobby+" "+obj.isMarried);
+        document.write("<br>");
+        //creating a array inside the object.....
+        var obj1={
+            name:"Kumar",
+            city:"delhi",
+            arry:[10,"india"]
+        }
+        document.write(obj1.arry[1]);
+        document.write("<br>");
+       //creating a function inside a object......
+       var obj2={
+           sno:2,
+           name:"Geeta",
+           ar:[10,20,"city"],
+           myFun:function(){
+               document.write("This is my Function inside the object.");
+           }
+       };
+       document.write(obj2.sno+" "+obj2.name+"<br>");
+       document.write(obj2.ar+"<br>");
+       obj2.myFun();
+    </script>
+</body>
+</html>

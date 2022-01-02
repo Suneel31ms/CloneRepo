@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 10px;
+        }
+        #outer{
+            width: 200px;
+            height: 200px;
+            background-color: burlywood;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        #inner{
+            width: 100px;
+            height: 100px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="hd">Javascript <span>DOM...</span> </h1>
+    <p id="para">Lorem ipsum dolor sit amet.</p>
+    <p class="param">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <a class="xyz" href="#">Link</a>
+    <img src="/Food_project/iced.jpg" alt="ice-cream" width="50%">
+    <table id="tb" border="1">
+        <tr>
+            <th>Name</th><th>City</th>
+        </tr>
+        <tr>
+            <td>Suneel</td><td>Tundla</td>
+        </tr>
+    </table>
+    <ul id="list" class="lst" abc="alpha">
+        <li>About</li>
+        <li xyz="123" class="li">Home</li>
+        <li>Contact</li>
+    </ul>
+    <ul id="list" class="lst">
+        <li>About</li>
+        <li xyz="123" class="li">Home</li>
+        <li>Contact</li>
+    </ul>
+
+    <div id="outer">
+        <div id="inner">inner</div>
+    </div>
+    <div class="check">hello check</div>
+    <!-- <div class="check">hey!!! check</div> -->
+    <script>
+        document.getElementByClassName("check").innerHTML;
+        // document.write(checkElem);
+        // document.querySelector("h1").onclick=myfun();
+        document.querySelector("h1").addEventListener("click",myfun);
+        function myfun(){
+            var target=document.querySelector("h1");
+            target.style.color="tomato";
+            this.style.backgroundColor="green";
+
+        }
+        ////
+        document.querySelector("#outer").addEventListener("click",function(){
+            alert("outter div");
+        });
+        document.querySelector("#inner").addEventListener("click",function(){
+            alert("inner div");
+        });
+    </script>
+</body>
+</html>

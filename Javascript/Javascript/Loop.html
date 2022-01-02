@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foor_Loop</title>
+</head>
+<body>
+    <!-- loops(forLoop,while loop,dowhile loop,forEach loop) -->
+    <script>
+        //-------------using Foor Loop..
+        var todos=[
+            "clean room",
+            "brush teeth",
+            "excerxise",
+            "Study js",
+            "eat healthy"
+        ];
+        for(var i=0;i<todos.length;i++){
+            document.write("Todos: "+todos[i]+"!"+"<br>");
+        }
+        document.write("<hr>");
+        //-----forEach() loop..........
+        todos.forEach(function(v,i){
+            document.write(v+"-"+i+"<br>");
+        })
+        var routine=[
+            "weakUp-7a.m",
+            "breakfast-8a.m",
+            "lunch-12p.m",
+            "snaks-4p.m",
+            "dinner-7p.m"
+        ];
+        // routine.push("Ram");
+        // routine.unshift("Ram");
+        // routine.pop(),routine.shift();
+        
+        var rlength=routine.length;
+        // for(var i=0;i<rlength;i++){
+        //      routine.pop();
+        //      //view on console//
+        //     // document.write(routine[i]+"<br>");  
+        // }
+       // document.write("<br>");
+    
+        //....while Loop.........
+            var counter=0;
+            while(counter<routine.length){
+                document.write(routine[counter]+"<br>");
+                counter++;
+            }
+        document.write("<hr>");
+            //......do while loop........
+            var counterr=4;
+            do{
+                document.write(routine[counterr]+"<br>");
+                counterr--;
+            }while(counterr>=0);
+
+    </script>
+</body>
+</html>

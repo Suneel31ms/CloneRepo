@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="myFunction1()">
+    <h1>Suneel</h1>
+    <script>
+
+        function myFunction1() {
+       
+          
+
+        
+        //input
+        // var input1 = document.createElement("input");
+        //     var input2 = document.createElement("input");
+        //     var input3 = document.createElement("input");
+        //     var input4 = document.createElement("input");
+        //     //textarea
+        //     var txtarea = document.createElement("textarea");
+        //     var btn = document.createElement("button");
+        //     function myInput(input, txt, wdth) {
+        //         input.setAttribute("placeholder", txt)
+        //         input.style.width = wdth;
+        //         input.style.padding = "10px";
+        //         input.style.margin = "5px auto";
+        //         input.style.color = "#1C4A00";
+        //         input.style.fontSize = "20px";
+        //         input.style.borderRadius = "10px";
+        //         input.style.border = "none";
+        //         input.style.backgroundColor = "#80BA5D"
+        //         form.appendChild(input);
+        //         btn.innerHTML = "Submit";
+        //     }
+        //     myInput(input1, 'Enter Name', '80%');
+        //     myInput(input2, 'Enter Email Id', '80%');
+        //     myInput(input3, 'Enter Phone No.', '80%');
+        //     myInput(input4, 'Enter Phone No.', '80%');
+        //     myInput(txtarea, 'Enter Comment...', '80%');
+        //     myInput(btn);
+
+
+            //////////////////////////////
+            
+            const value = ['Enter Name','Enter Email','Enter Phone'];
+            let btn = document.createElement("button");
+           for(let i=0;i<=2;i++){
+            var inputt = document.createElement("input");
+            function myInput(input, txt, wdth) {
+                input.setAttribute("placeholder", value[i])
+                input.style.width = wdth;
+                input.style.padding = "10px";
+                input.style.margin = "5px auto";
+                input.style.color = "#1C4A00";
+                input.style.fontSize = "20px";
+                input.style.borderRadius = "10px";
+                input.style.border = "none";
+                input.style.backgroundColor = "#80BA5D";
+                btn.innerHTML ="Submit"
+                document.body.appendChild(input,btn);
+               
+            }
+            myInput(inputt, 'Enter Name', '80%');
+           
+
+           }
+           myInput(btn);
+
+
+            }
+
+           
+
+
+
+
+
+    </script>
+</body>
+
+</html>

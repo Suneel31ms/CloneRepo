@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let complete = true;
+        let prom = new Promise(function(resolve,reject){
+            if(complete){
+                resolve("I am Successfull");
+            }
+            else{
+                reject("I am Failed");
+            }
+          
+        });
+        console.log(prom);
+
+        //
+        function promis(value){
+           return new Promise(function(resolve,reject){
+            console.log("Fetching data, please wait...")
+               setTimeout(() => {
+                if(value>20){
+                    resolve("Resolve");
+                }else{
+                    reject("Reject");
+                } 
+               }, 3000);
+            });
+        }
+let onResolve=(result)=>{
+    console.log(result);
+}
+let onReject=(error)=>{
+    console.log(error);
+}
+
+promis("2")?.then(onResolve)?.catch(onReject);
+
+
+//
+
+    </script>
+</body>
+</html>
